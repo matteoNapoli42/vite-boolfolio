@@ -27,14 +27,8 @@ export default {
 </script>
 
 <template>
-  <header>
-    <Navbar />
-
-  </header>
-
-  <main class="d-flex container mx-auto flex-wrap gap-3 justify-center mt-5">
-    <ProjectCard :project="project" v-for="project in state.projects" />
-  </main>
+  <Navbar />
+  <router-view></router-view>
 </template>
 
 <style ></style>
