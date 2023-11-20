@@ -1,14 +1,12 @@
 <script>
-import ProjectCard from './components/ProjectCard.vue'
+//import ProjectCard from './components/ProjectCard.vue'
 import Navbar from './components/Navbar.vue'
 import { state } from './state'
 export default {
   name: "App",
 
   components: {
-    ProjectCard,
     Navbar,
-
   },
 
   data() {

@@ -1,14 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
-
-import ProjectCard from './components/ProjectCard.vue';
-
+import ProjectView from './views/ProjectView.vue'
 const router = createRouter({
     history: createWebHistory(),
     routes: [
         {
             path: '/projects',
             name: 'projects',
-            component: ProjectCard
+            component: ProjectView
         }
     ]
 })
