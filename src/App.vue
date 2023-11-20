@@ -12,6 +12,24 @@ export default {
   data() {
     return {
       state,
+
+      menuItems:
+        [
+          {
+            name: 'Home',
+            url: '/'
+          },
+
+          {
+            name: 'About',
+            url: '/About'
+          },
+
+          {
+            name: 'Projects',
+            url: '/projects'
+          }
+        ]
     }
   },
 
@@ -25,7 +43,7 @@ export default {
 </script>
 
 <template>
-  <Navbar />
+  <Navbar :items="menuItems" />
   <router-view></router-view>
 </template>
 

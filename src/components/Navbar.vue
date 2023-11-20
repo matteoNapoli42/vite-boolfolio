@@ -2,6 +2,9 @@
 
 export default {
     name: 'Navbar',
+    props: {
+        items: Object
+    }
 }
 </script>
 
@@ -12,18 +15,15 @@ export default {
             <a class="navbar-brand" href="#">VITE-BOOLFOLIO</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/matteoNapoli42?tab=repositories">My Repositories</a>
-                    </li>
-                    <li class="nav-item">
-                        <router-link class=" nav-link" to="/projects">
-                            Projects
+                    <li class="nav-item" v-for="item in items">
+                        <router-link class="nav-link active" :to="item.url">
+                            {{ item.name }}
                         </router-link>
                     </li>
-
+                    <li class="nav-item py-2">
+                        <a href="https://github.com/matteoNapoli42?tab=repositories"
+                            class=" text-decoration-none text-black">GitHub</a>
+                    </li>
                 </ul>
             </div>
         </div>
