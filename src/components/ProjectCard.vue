@@ -22,11 +22,11 @@ export default {
             </div>
             <div class=" card-body d-flex flex-column">
 
-                <div>
-                    <img src="" alt="">
+                <div class="text-center">
+                    <img :src="project.thumb" alt="">
                 </div>
 
-                <p>Description : {{ project.description }}</p>
+                <p class="mt-3">Description : {{ project.description }}</p>
 
                 <span>
                     Type :
@@ -38,9 +38,9 @@ export default {
                     </span>
                 </span>
 
-                <div class="">
+                <div>
                     TECHNOLOGIES :
-                    <ul class=" list-unstyled" v-for="technology in project.technologies">
+                    <ul class=" list-unstyled" v-for=" technology  in  project.technologies ">
                         <li>{{ technology.name }}</li>
                     </ul>
                 </div>
@@ -56,7 +56,7 @@ export default {
                         </span>
                     </div>
 
-                    <div>
+                    <div class="mt-2">
                         PROJECT LINK : <span v-if="project.project_link">
                             {{ project.project_link }}
                         </span>
