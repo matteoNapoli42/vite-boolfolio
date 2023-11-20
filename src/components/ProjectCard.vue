@@ -30,8 +30,8 @@ export default {
 
                 <span>
                     Type :
-                    <div v-if="project.type_id">
-                        {{ project.type_id }}
+                    <div v-if="project.type">
+                        {{ project.type.name }}
                     </div>
                     <span v-else>
                         N/D
@@ -49,7 +49,7 @@ export default {
 
                     <div>
                         GITHUB : <span v-if="project.github">
-                            {{ project.github }}
+                            <a href="" style="text-decoration: none;">{{ project.github }}</a>
                         </span>
                         <span v-else>
                             N/D
