@@ -4,6 +4,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import ProjectView from './views/ProjectView.vue';
 import About from './views/About.vue';
 import NotFound from './views/NotFound.vue';
+import SingleProjectView from './components/SingleProjectView.vue';
 import App from '../src/App.vue';
 import { formToJSON } from "axios";
 const router = createRouter({
@@ -26,6 +27,12 @@ const router = createRouter({
             name: 'not-found',
             component: NotFound
         },
+
+        {
+            path: '/project/:slug',
+            name: 'project',
+            component: SingleProjectView
+        }
     ]
 })
 

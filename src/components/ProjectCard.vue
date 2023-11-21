@@ -1,6 +1,12 @@
 <script>
+import { state } from '../state'
 export default {
     name: "ProjectCard",
+    data() {
+        return {
+            state,
+        }
+    },
 
     props: {
         project: Object,
@@ -64,6 +70,12 @@ export default {
                         </span>
                     </div>
                 </div>
+                <router-link :to="{
+                    name: 'project',
+                    params: { slug: project.slug }
+                }">
+                    <button class="btn btn-primary rounded-3 mt-2">View Project</button>
+                </router-link>
             </div>
             <div class=" card-footer">
             </div>
