@@ -4,7 +4,7 @@ export default {
 
     props: {
         project: Object,
-        baseUrl: String,
+
     },
 
     methods: {
@@ -16,7 +16,6 @@ export default {
 <template>
     <div class=" col-3">
         <div class="card">
-
             <div class=" card-header">
                 {{ project.title }}
             </div>
@@ -64,12 +63,9 @@ export default {
                             N/D
                         </span>
                     </div>
-
-
-
                 </div>
-
-
+            </div>
+            <div class=" card-footer">
             </div>
         </div>
     </div>

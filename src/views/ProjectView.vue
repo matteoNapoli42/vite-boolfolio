@@ -20,7 +20,7 @@ export default {
 }
 </script>
 <template>
-    <div class=" container d-flex flex-wrap gap-3 mx-auto mt-5">
+    <div class=" container d-flex flex-wrap gap-5 mx-auto mt-5">
         <ProjectCard :project="project" v-for="project in state.projects" />
     </div>
 </template>
